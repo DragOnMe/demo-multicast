@@ -2,5 +2,5 @@
 
 gox -osarch="linux/amd64"
 
-docker build -t docker.io/mjelen/demo-multicast .
-docker push docker.io/mjelen/demo-multicast
+docker build -t drlee001/demo-multicast .
+docker push drlee001/demo-multicast
