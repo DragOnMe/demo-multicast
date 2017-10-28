@@ -57,7 +57,7 @@ func main() {
             for k := range names {
                 keys = append(keys, k)
             }
-            fmt.Println("[Main Server] Known peers alive are:", strings.Join(keys, ", "))
+            fmt.Println("[Main Server] Peer msgs:", strings.Join(keys, ", "))
         }
     }()
 
@@ -103,5 +103,7 @@ func ping(name string, address *net.UDPAddr) {
     // fmt.Println("Sending ping")
     fmt.Printf("[Pinging from %s] Sending ping to %s\n", localAddr.IP.String(), address.String())
 
-    c.Write([]byte(name))
+    // msg = name + "-Hello"
+    msg := name + "-Hello"
+    c.Write([]byte(msg))
 }
